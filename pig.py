@@ -27,7 +27,6 @@ class PlayGame:
 
     def play_game(self):
         game_over = False
-        player_list = [self.player_one, self.player_two]
         first_players_turn = True
         while not game_over:
             self.scoreboard.display()
@@ -38,8 +37,6 @@ class PlayGame:
                 print("Player 2")
                 game_over = self.player_two.take_turn()
             first_players_turn = not first_players_turn
-        print(f"p1:{self.player_one.score}")
-        print(f"p2:{self.player_two.score}")
 
     def start_game(self):
         pass
