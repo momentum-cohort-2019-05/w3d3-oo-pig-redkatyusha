@@ -6,7 +6,10 @@ class Game:
     """
 
     def __init__(self):
-        pass
+        self.scoreboard = Scoreboard()
+        player1 = input("What is your name, Player 1? ")
+        player2 = input("What is your name, Player 2? ")
+        self.players = Player(player1, player2)
 
 class Scoreboard:
     """
@@ -34,4 +37,4 @@ class Die:
         self.sides = sides
 
     def roll(self):
-        return random.randrange(self.sides)
+        return random.randrange(1, self.sides + 1)
