@@ -1,3 +1,5 @@
+import random
+
 class Game:
     """
     Plays the dice game Pig with two players.
@@ -8,7 +10,7 @@ class Game:
 
 class Scoreboard:
     """
-    Keeps track of the turn score and total score.
+    Keep track of the turn score and total score.
     """
 
     def __init__(self):
@@ -16,16 +18,20 @@ class Scoreboard:
 
 class Player:
     """
-    Keeps track of the players in the game.
+    Represents the players in the game.
     """
 
-    def __init__(self):
-        pass
+    def __init__(self, player1, player2):
+        self.player1 = player1
+        self.player2 = player2
 
 class Die:
     """
-    Roll a die!
+    Represents a die with six sides.
     """
 
-    def __init__(self):
-        pass
+    def __init__(self, sides=6):
+        self.sides = sides
+
+    def roll(self):
+        return random.randrange(self.sides)
